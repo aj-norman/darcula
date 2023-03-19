@@ -189,7 +189,7 @@ hi! link QuickFixLine NormalFg
 call s:Hi('Search', s:p.null, s:p.search)
 call s:Hi('IncSearch', s:p.null, s:p.incSearch)
 hi! link SpecialKey NonText
-call s:Hi('SpellBad', s:p.typo, s:p.null, 'underline')
+call s:Hi('SpellBad', s:p.typo, s:p.null, 'undercurl')
 hi! link SpellCap SpellBad
 hi! link SpellLocal SpellBad
 hi! link SpellRare SpellBad

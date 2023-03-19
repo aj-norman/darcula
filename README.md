@@ -2,38 +2,21 @@
 
 ![darcula](./img/full_screen.png)
 
-:smiling_imp: A [Vim](https://www.vim.org/)/[Neovim](https://neovim.io/) color scheme reproduction of the official [JetBrains](https://www.jetbrains.com/) IDE Darcula theme
+:smiling_imp: A [Vim](https://www.vim.org/)/[Neovim](https://neovim.io/) color scheme reproduction of the official [JetBrains](https://www.jetbrains.com/) IDE Darcula theme. Forked from doums/darcula.
 
 ### install
-If you use a plugin manager, follow the traditional way.
+Using `wbthomason/packer.nvim`, Copy the following snippet to your configuation files (i.e. `plugins.lua`)
 
-For example with [vim-plug](https://github.com/junegunn/vim-plug) add this in `.vimrc`/`init.vim`:
-```
-Plug 'doums/darcula'
-```
-
-Then run in vim:
-```
-:source $MYVIMRC
-:PlugInstall
-```
-If you use vim package `:h packages`.
-
-### usage
-Put this in your `.vimrc`/`init.vim`:
-```
-colorscheme darcula
-```
-To fully enjoy the color scheme and if your terminal supports [Truecolor](https://gist.github.com/XVilka/8346728) add
-```
-set termguicolors
+```lua
+use({
+  'aj-norman/darcula',
+  config = function ()
+      vim.cmd('colorscheme darcula')
+  end
+})
 ```
 
-If you use [lightline](https://github.com/itchyny/lightline.vim):
-```
-let g:lightline = { 'colorscheme': 'darculaOriginal' }
-```
-NOTE: lightline already provides a "darcula" color scheme that I find simply bad. I strongly recommend to use mine instead (using `darculaOriginal` instead of `darcula` in the above config).
+Adding the function will set NVIM to use the darcula colourscheme by default
 
 **tree-sitter** support
 
